@@ -32,6 +32,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer'
+  gem "therubyracer"
+  gem "less-rails"
+
+  gem 'twitter-bootstrap-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
