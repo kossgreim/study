@@ -8,19 +8,20 @@
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :description, :class => 'text_field' %>
+      <%= f.text_area :description, :class => 'text_field', rows: 3%>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :price, :class => 'text_field', size: 5%>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :image_url, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :image_url, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :price, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :price, :class => 'text_field' %>
+      <%= f.text_field :image_url, :class => 'text_field', size: 5%>
     </div>
   </div>
 
