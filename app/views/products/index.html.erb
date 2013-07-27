@@ -7,7 +7,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= image_tag(product.image_url, class: "img-rounded") %></td>
+        <td><%= image_tag("/assets"+product.image_url, class: "img-rounded") %></td>
         <td>
         <dl>
           <dt><%= link_to product.title, product_path(product) %></dt>
