@@ -1,4 +1,5 @@
 Study::Application.routes.draw do
+  get "store/index"
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -58,5 +59,5 @@ Study::Application.routes.draw do
 
   resources :products
 
-  root to: 'products#index'
+  root to: 'store#index'
 end
