@@ -1,4 +1,8 @@
 Study::Application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
   get "store/index"
   resources :products
 
@@ -58,6 +62,7 @@ Study::Application.routes.draw do
   #   end
 
   resources :products
+  resources :store
 
   root to: 'store#index'
 end
