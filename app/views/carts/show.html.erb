@@ -1,9 +1,17 @@
+<table class="table table-hover">
+
 <% @cart.line_items.each do |item| %>
-	<ul>
-		<li><%= item.quantity %> &times; <%= item.product.title %></li>
-	</ul>
+	<tr>
+		<td><%= item.quantity %>&times;</td>
+		<td><%= item.product.title %></td>
+		<td><%= number_to_currency(item.product.price) %></td>
+	</tr>
 
 <% end %>
-
-<%= link_to 'Edit', edit_cart_path(@cart) %>
-<%= link_to 'Back', carts_path %>
+	<tr>
+		<td colspam="2"><b>Total</b></td>
+		<td><b><%= number_to_currency(@cart.total_price) %></b></td>
+	</tr>
+	
+</table>
+<%= button_to 'Empty cart', @cart, method: :delete, class: 'btn btn-primary  btn-small', confirm: 'are you sure?' %>
