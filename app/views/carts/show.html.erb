@@ -1,14 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %> 
-<%= @cart.line_items.each do |item| %>
+<% @cart.line_items.each do |item| %>
 	<ul>
 		<li><%= item.product.title %></li>
 	</ul>
 
 <% end %>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Edit', edit_cart_path(@cart) %>
 <%= link_to 'Back', carts_path %>
