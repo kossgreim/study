@@ -1,0 +1,14 @@
+<% unless cart.line_items.empty? %>
+<table class="table table-hover">
+
+	<%= render(@cart.line_items) %>
+	
+	<tr>
+		<td colspam="2"><b>Total</b></td>
+		<td><b><%= number_to_currency(@cart.total_price) %></b></td>
+	</tr>
+	
+</table>
+<%= button_to 'Empty cart', @cart, method: :delete,
+	 class: 'btn btn-primary  btn-small', confirm: 'are you sure?' %>
+	 <% end %>
