@@ -64,14 +64,19 @@
           </div>
           <div class="span3">
             <div class="col-lg-4">
-              
-              <h3>Your cart</h3>
-              <div id="cart"
+            <% if @cart %>
+             
+            <div  id="cart">
+
+              <div
               <% if @cart.line_items.empty? %>
                 style="display:none"
               <% end %>
-                ><%= render @cart %></div>
+                >
+                <%= render @cart %></div>
 
+            </div>
+            <% end %>
             </div><!--/.well -->
           </div><!--/span-->
         </div><!--/row-->

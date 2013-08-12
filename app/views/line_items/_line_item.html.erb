@@ -9,7 +9,7 @@
 		<td><%= item.quantity %>&times;</td>
 		<td><%= item.product.title %></td>
 		<td><%= number_to_currency(item.product.price) %></td>
-		<td><%= link_to content_tag(:i, "", class: "icon-trash icon-white"), item, method: :delete, class: "btn btn-danger remove_fields" %></td>
+		<td><%= button_to '-', item, method: :delete, class: "btn btn-danger remove_fields" %></td>
 	</tr>
 
 <% end %>

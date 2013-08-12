@@ -59,8 +59,7 @@ class CartsController < ApplicationController
     session[:cart_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to root_url,
-        notice: 'Your cart is currently empty' }
+      format.html { redirect_to root_url }
       format.json { head :no_content }
     end
   end
@@ -72,7 +71,7 @@ class CartsController < ApplicationController
         @cart = Cart.find(params[:id])
         rescue ActiveRecord::RecordNotFound
           logger.error "Try to crash cart"
-          redirect_to root_path, notice: 'Cart not found'
+          redirect_to root_path
         else
           respond_to do |format|
             format.html #show.html.erb
