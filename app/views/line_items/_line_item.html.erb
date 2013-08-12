@@ -9,7 +9,9 @@
 		<td><%= item.quantity %>&times;</td>
 		<td><%= item.product.title %></td>
 		<td><%= number_to_currency(item.product.price) %></td>
-		<td><%= button_to '-', item, method: :delete, class: "btn btn-danger btn-mini remove_fields" %></td>
+		<% if params['controller'] != 'orders' %>
+			<td><%= button_to '-', item, method: :delete, class: "btn btn-danger btn-mini remove_fields" %></td>
+		<% end %>
 	</tr>
 
 <% end %>

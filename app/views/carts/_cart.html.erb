@@ -10,9 +10,11 @@
 	
 </table>
 	<p>
-		<%= button_to "Checkout", new_order_path, method: :get, class: 'btn btn-success  btn-mini' %>
-		<%= button_to 'Empty cart', @cart, method: :delete,
+		<% if params['controller'] != 'orders' %>
+			<%= button_to "Checkout", new_order_path, method: :get, class: 'btn btn-success  btn-mini' %>
+			<%= button_to 'Empty cart', @cart, method: :delete,
 				 class: 'btn btn-primary  btn-mini', confirm: 'are you sure?' %>
+		<% end %>
 	</p>
 	
 
