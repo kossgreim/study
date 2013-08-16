@@ -6,7 +6,7 @@ class OrderNotifier < ActionMailer::Base
   #
   #   en.order_notifier.received.subject
   #
-  def received
+  def received(order)
     @order = order
 
     mail to: order.email, subject: "Confirm order in pragmatic store"
@@ -17,7 +17,7 @@ class OrderNotifier < ActionMailer::Base
   #
   #   en.order_notifier.shipped.subject
   #
-  def shipped
+  def shipped(order)
     @order = order
 
     mail to: order.email, subject: "Your order sent"
