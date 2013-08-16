@@ -1,18 +1,24 @@
-<%= form_tag do %>
+<%= form_for @user do |f| %>
   <div class="control-group">
-    <%= label_tag :name, :class => 'control-label' %>
+    <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
-      <%= text_field_tag :name, :class => 'text_field' %>
+      <%= f.text_field :name, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= label_tag :password, :class => 'control-label' %>
+    <%= f.label :password, :class => 'control-label' %>
     <div class="controls">
-      <%= password_field_tag :password, :class => 'text_field' %>
+      <%= f.password_field :password, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :password_confirmation, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.password_field :password_confirmation, :class => 'text_field' %>
     </div>
   </div>
 
   <div class="form-actions">
-    <%= submit_tag 'Login', :class => 'btn btn-primary' %>
+    <%= f.submit 'Create user', :class => 'btn btn-primary' %>
   </div>
 <% end %>
