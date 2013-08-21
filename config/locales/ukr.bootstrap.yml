@@ -1,0 +1,15 @@
+ukr:
+  helpers:
+    actions: "Дії"
+    links:
+      back: "Назад"
+      cancel: "Відмінити"
+      confirm: "Ви впевнені?"
+      destroy: "Видалити"
+      new: "Новий"
+      edit: "Редагувати"
+    titles:
+      edit: "Редагувати"
+      save: "Зберегти"
+      new: "Новий"
+      delete: "Видалити"

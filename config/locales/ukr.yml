@@ -1,0 +1,10 @@
+ukr:
+
+    layouts:
+      application: 
+        title: "Магазин"
+        home: "Магазин"
+        products: 'Продукти'
+        user: "Користувачі"
+        logout: "Вийти"
+        signin: "Вхід"
