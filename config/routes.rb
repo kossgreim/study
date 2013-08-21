@@ -7,23 +7,23 @@ Study::Application.routes.draw do
     get 'logout' => :destroy
   end
   
-  resources :users
+  scope '(:locale)' do
+    resources :users
 
-  resources :orders
+    resources :orders
 
-  resources :line_items
+    resources :line_items
 
-  resources :carts
+    resources :carts
+    resources :products
 
-  get "store/index"
-  resources :products
+    resources :products
+    resources :store
 
-  resources :products
-  resources :store
+    resources :products do 
+      get :who_bought, on: :member
+    end
 
-  resources :products do 
-    get :who_bought, on: :member
+    root to: 'store#index'
   end
-
-  root to: 'store#index'
 end

@@ -1,0 +1,21 @@
+
+
+<%= form_tag do %>
+  <div class="control-group">
+    <%= label_tag :name, "Name", :class => 'control-label' %>
+    <div class="controls">
+      <%= text_field_tag :name, params[:name], :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= label_tag :password, 'Password', :class => 'control-label' %>
+    <div class="controls">
+      <%= password_field_tag :password, '', :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= submit_tag 'Login', :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+
