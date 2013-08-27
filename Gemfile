@@ -52,7 +52,11 @@ end
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+  gem 'capistrano'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :prodaction do 
+	gem 'mysql2'
+end

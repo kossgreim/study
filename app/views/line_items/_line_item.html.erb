@@ -1,4 +1,4 @@
-<%=  YAML::dump(@cart) %>
+<%=  YAML::dump(@t) %>
 <% @cart.line_items.each do |item| %>
 
 <% if line_item = @current_item %>

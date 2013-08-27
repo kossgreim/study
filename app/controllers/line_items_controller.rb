@@ -28,8 +28,8 @@ class LineItemsController < ApplicationController
   
     @cart = current_cart
     product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(product.id)
-    @line_item.product = product
+    @line_item = @cart.add_product(product)
+    #@line_item.product = product
 
     respond_to do |format|
       if @line_item.save
